@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Scoop Themes | Colupsus Landing Page Documentation">
+    <meta name="author" content="Scoop Themes">
+
+    <title>My Medico - Dashboard</title>
+
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/fordash.css" rel="stylesheet">
+
+    <script src="jquery-1.8.3.min.js"></script>
+    <script src="jquery.json-2.2.js"></script>
+    <script src="GetPostAjax.js"></script>
+
+
+
+
+
+<style>
+
+/* CSS used here will be applied after bootstrap.css */
+
+body { 
+ background: url('img/eco/bk-eco-ga-2.jpg') no-repeat center center fixed; 
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+}
+
+.panel-default {
+ opacity: 0.9;
+ margin-top:0px;
+}
+.form-group.last {
+ margin-bottom:0px;
+}
+
+</style>
+
+
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="index.html">
+                     <img src="http://i57.tinypic.com/ipxwl2.jpg" >
+                    </a>
+                </li>
+                <li><a href="#info">My Medico <right><i class="fa fa-dashboard"></i></right></a>
+                </li>
+                <li><a href="#viewedit">View/Edit Details<right><i class="fa fa-pencil-square-o"></right></i></a>
+                </li>
+                
+               <li><a href="#reco" >Get Recommendations <right><i class="fa fa-stethoscope"></i></right>  </a>
+                </li>
+                
+                <li><a href="#tools"> Tools <right><i class="fa fa-wrench"></right></i></a>
+                </li>
+                <li><a href="#analytics"> Analytics <right><i class="fa fa-table"></right></i></a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Page content -->
+
+
+        <div id="page-content-wrapper ">
+            <div class="content-header">
+               <!--  <a id="menu-toggle" href="#" class="btn btn-default">
+                    <span class="fa fa-bars"></span>
+                </a> -->
+             <center>   <h1>  My Medico
+                </h1></center>
+            </div>
+
+            <br>
+            <br>
+            <br>
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+
+                  <div class="row" id="info">
+                    <div class="col-md-12 text-center">
+                        <h2>Welcome</h2>
+                         <div class="container-fluid">
+
+                          <img src = "http://klasinskiclinic.com/wp-content/uploads/2014/01/healthy-life.jpg">
+
+                            <br>
+                            <br>
+
+    <div class="row">
+        <div class="col-xs-6 block block-sm">
+            <h2>Get Recommendations?</h2>
+            <p>Generate recommendations for yourselves by creating your own personal profile. Learn about what diseases your are susceptible to and how you can prevent or cure them. Using intricate analysis your information is compared to humongous datasets to provide you with reliable recommendations for lifestyle related diseases like diabetes, hypertension and obesity. </p>
+            <br><br>
+            <p><b><a href="#reco" target="_blank" class="btn-xlarge btn-success">Get Recommendations</a></b></p>
+        </div>
+        <div class="col-xs-6 block block-sm">
+            <h2>Analytics</h2>
+            <p>Surprised by the recommendations we came up with? Would you like to know how many people of various demographics are bound to get lifestyle diseases? Our complex analytics mechanism comes with the statistics of various lifestyle related diseases against age, ethnicity, location, etc. to help you understand that there are many factors that determine how and why a person acquires a disease.</p>
+            <br>
+            <p><a href="#analytics" target="_blank" class="btn-xlarge btn-success">View Analytics</a></p>
+        </div>
+    </div>
+          </div>
+
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+
+
+                       </div>
+                    </div>
+                
+
+                  <div class="row" id="viewedit">
+                    <div class="col-md-12">
+                        <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+
+                        <p><center><h2>View/Edit Profile</h2></center></p>
+                        <p>To facilitate highly precise recommendation the system need to know as much information about you as possible, i.e the more you provide information, the more accurate the results will be. With every information about yourself that you add the system understand you better before it kicks its gears into finding appropriate recommendations for you. </p>
+
+                        <script>
+
+                       
+
+                        function idealweightvalue(returnIH)
+                        {
+                          var toolweight;
+
+                    $.each(returnjson, function(idx, obj) {
+
+                        $.each(obj, function(key, value) {
+
+                        toolweight =  obj['weight'];
+});
+});
+                         //   alert(toolweight);
+  
+
+                        }
+
+
+                        function setvalue(returnjson)
+                        {
+
+                          var diabetesmap = new Object();
+                          var hypertensionmap = new Object();
+                          var obesitymap = new Object();
+
+                          diabetesmap[1] = "Diabetes - Normal: Minimal Risk of Diabetes - Your current lifestyle may lead to diabetes, Start leading healthy lifestyle";
+                          diabetesmap[2] = "Diabetes - Early Diabetes: You are at risk of Established Diabetes in the future, Manage your diet Avoid fatty foods, start exercising atleast twice a week, lower blood sugar level" ;
+                          diabetesmap[3] = "Diabetes - Established Diabetes: You are at high risk of Established Diabetes in the future, Adopt healthy diet , Less than 25 percent of your calories should come from fat, exercise regularly and maintain body weight, Lower blood sugar levels, consult doctor for medication";
+
+                          hypertensionmap[1] = "Hypertension - Minimal Risk of Hypertension, Start leading healthy lifestyle";
+                          hypertensionmap[2] = "Hypertension - Pre Hypertension - At risk of hypertension in the future, Start leading healthy lifestyle, Get regular exercise";
+                          hypertensionmap[3] = "Hypertension - High Blood Pressure - At high risk of hypertension in the future, Make lifestyle modifications, adopt healthy diet, low sodium diet, start regular exercise, quit smoking , may need to consult doctor if the situation persists and cannot be controlled ";
+                          hypertensionmap[4] = "Hypertension - Very High Blood Pressure - At high risk of hypertension in the future, Make lifestyle modifications, adopt healthy diet, low sodium diet, start regular exercise, quit smoking , lose weight if over weight, limit alcohol consumption to minimum, consult doctor immediately and start medications as prescribed by doctor";
+                          hypertensionmap[5] = "Hypertension - Medical Crisis, Get emergency care immediately";
+
+                          obesitymap[1] = "Underweight - Please consult a dietician";
+                          obesitymap[2] = "Obesity - Healthy Weight: Minimal Risk of Obesity, Start leading healthy lifestyle";
+                          obesitymap[3] = "Obesity - Over Weight: At risk of Obesity, Reduce calorie intake, Try low card or low fat diet, eat healthy food, start regular exercise regime";
+                          obesitymap[4] = "Obese - Obese: At high Risk of Obesity, Reduce energy intake,  Try low card or low fat diet, eat healthy food, start regular exercise regime, get medical consultation";
+
+                          var healthy = "Currently you lead a healthy lifestyle, Continue with this to avoid future risk of lifestyle related diseases";
+                          var unhealthy = "Currently you lead an unhealthy lifestyle, You might be at risk of lifestyle related diseases in future, Please change your lifestyle and daily habits ";
+
+
+                          var res;
+$.each(returnjson, function(idx, obj) {
+
+$.each(obj, function(key, value) {
+
+dband = obj['diabetesBand'];
+hband = obj['hyperTensionBand'];
+oband = obj['obesityBand'];
+drank = obj['diabetes'];
+hrank = obj['hyperTension'];
+orank = obj['obesity'];
+healthrank = obj['healthyProfile'];
+unhealthrank=obj['unhealthyProfile'];
+});
+});
+
+if (healthrank ==1)
+{
+
+document.getElementById("p1").innerHTML=healthy;
+}
+ else
+if (drank==1)
+{
+    document.getElementById("p1").innerHTML=diabetesmap[dband];
+}
+else
+if (hrank==1)
+{
+  document.getElementById("p1").innerHTML=hypertensionmap[hband];
+}
+else
+if (orank ==1)
+{
+  document.getElementById("p1").innerHTML= obesitymap[oband];
+}
+else 
+if (unhealthrank == 1)
+{
+  document.getElementById("p1").innerHTML = unhealthy;
+} 
+//-------------------------------------------------------
+if (drank==2)
+{
+    document.getElementById("p2").innerHTML=diabetesmap[dband];
+}
+else
+if (hrank==2)
+{
+  document.getElementById("p2").innerHTML=hypertensionmap[hband];
+}
+else
+if (orank ==2)
+{
+  document.getElementById("p2").innerHTML= obesitymap[oband];
+}
+else 
+if (unhealthrank == 2)
+{
+  document.getElementById("p2").innerHTML = unhealthy;
+}
+
+//------------------------------------------------------------------
+
+if (drank==3)
+{
+    document.getElementById("p3").innerHTML=diabetesmap[dband];
+}
+else
+if (hrank==3)
+{
+  document.getElementById("p3").innerHTML=hypertensionmap[hband];
+}
+else
+if (orank ==3)
+{
+  document.getElementById("p3").innerHTML= obesitymap[oband];
+}
+else 
+if (unhealthrank == 3)
+{
+  document.getElementById("p3").innerHTML = unhealthy;
+}
+//__________________________
+if (drank==4)
+{
+    document.getElementById("p4").innerHTML=diabetesmap[dband];
+}
+else
+if (hrank==4)
+{
+  document.getElementById("p4").innerHTML=hypertensionmap[hband];
+}
+else
+if (orank ==4)
+{
+  document.getElementById("p4").innerHTML= obesitymap[oband];
+}
+else 
+if (unhealthrank == 4)
+{
+  document.getElementById("p4").innerHTML = unhealthy;
+}
+
+                        }
+
+
+                        function addListeners()
+                        {
+                          document.getElementById('editinfo').addEventListener("click",editfunction);
+                        //  document.getElementById('viewinfo').addEventListener("click",viewfunction);
+                          document.getElementById('getreco').addEventListener("click",getrecom);
+                          document.getElementById('bmisubmit').addEventListener("click",getbmi);
+                          document.getElementById('iwsubmit').addEventListener("click",getiw);
+                        }
+                        function editfunction()
+                        {
+                          // alert("i am in editfn");
+                      function getParameterByName(name) {
+                          name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+                          var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                          results = regex.exec(location.search);
+                          return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+                            }
+                          var paramemail = getParameterByName('email');
+                          //alert(paramemail);
+
+                          var newurl= "editinfo.html?email="+paramemail;
+                          // alert(newurl);
+
+                           window.open(newurl, "_blank", "location=yes");
+
+                        }
+
+                        function viewfunction()
+                        {
+
+                          // alert("i am in viewfn");
+                      function getParameterByName(name) {
+                          name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+                          var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                          results = regex.exec(location.search);
+                          return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+                            }
+                          var paramemail = getParameterByName('email');
+                        //  alert(paramemail);
+
+                           var newurl= "viewinfo.html?email="+paramemail;
+                         //  alert(newurl);
+
+
+                          window.open(newurl, "_blank", "location=yes");
+
+
+                        }
+
+                         getbmi = function(e)
+                        {
+                        e.preventDefault();
+ var height=$("#height").val();
+var weight=$("#weight").val();
+
+ var decimalheight=height - Math.floor(height);
+ var intheight=Math.floor(height);
+ decimalheight = (decimalheight*10) + (intheight*12);
+ decimalheight = decimalheight*0.025;
+ var weight = weight*0.45;
+
+ var bmi;
+ bmi = weight/(decimalheight*decimalheight);
+
+                            $('#bmimodal').modal('show');
+
+
+  document.getElementById("bmimodalp").innerHTML=bmi;
+
+
+                        }
+
+ getiw = function(e)
+                        {
+                        e.preventDefault();
+ var height=$("#idheight").val();
+
+ var decimalheight=height - Math.floor(height);
+ var intheight=Math.floor(height);
+ decimalheight = (decimalheight*10) + (intheight*12);
+ decimalheight = decimalheight*0.025;
+
+ var idealweightvalue;
+ idealweightvalue = 49 + (1.9 *decimalheight);
+
+                            $('#idealmodal').modal('show');
+
+
+  document.getElementById("idealmodalp").innerHTML=idealweightvalue;
+
+
+                        }
+
+
+                         function getrecom()
+                        {
+                               // alert("in getreco");
+                                $.toJSON = function(o)
+    {
+        if (typeof(JSON) == 'object' && JSON.stringify)
+            return JSON.stringify(o);
+        
+        var type = typeof(o);
+    
+        if (o === null)
+            return "null";
+    
+        if (type == "undefined")
+            return undefined;
+        
+        if (type == "number" || type == "boolean")
+            return o + "";
+    
+        if (type == "string")
+            return $.quoteString(o);
+    
+        if (type == 'object')
+        {
+            if (typeof o.toJSON == "function") 
+                return $.toJSON( o.toJSON() );
+            
+            if (o.constructor === Date)
+            {
+                var month = o.getUTCMonth() + 1;
+                if (month < 10) month = '0' + month;
+
+                var day = o.getUTCDate();
+                if (day < 10) day = '0' + day;
+
+                var year = o.getUTCFullYear();
+                
+                var hours = o.getUTCHours();
+                if (hours < 10) hours = '0' + hours;
+                
+                var minutes = o.getUTCMinutes();
+                if (minutes < 10) minutes = '0' + minutes;
+                
+                var seconds = o.getUTCSeconds();
+                if (seconds < 10) seconds = '0' + seconds;
+                
+                var milli = o.getUTCMilliseconds();
+                if (milli < 100) milli = '0' + milli;
+                if (milli < 10) milli = '0' + milli;
+
+                return '"' + year + '-' + month + '-' + day + 'T' +
+                             hours + ':' + minutes + ':' + seconds + 
+                             '.' + milli + 'Z"'; 
+            }
+
+            if (o.constructor === Array) 
+            {
+                var ret = [];
+                for (var i = 0; i < o.length; i++)
+                    ret.push( $.toJSON(o[i]) || "null" );
+
+                return "[" + ret.join(",") + "]";
+            }
+        
+            var pairs = [];
+            for (var k in o) {
+                var name;
+                var type = typeof k;
+
+                if (type == "number")
+                    name = '"' + k + '"';
+                else if (type == "string")
+                    name = $.quoteString(k);
+                else
+                    continue;  //skip non-string or number keys
+            
+                if (typeof o[k] == "function") 
+                    continue;  //skip pairs where the value is a function.
+            
+                var val = $.toJSON(o[k]);
+            
+                pairs.push(name + ":" + val);
+            }
+
+            return "{" + pairs.join(", ") + "}";
+        }
+    };
+
+
+                          
+                           $('#recomodal').modal('show');
+
+                           function getParameterByName(name) {
+                          name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+                          var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                          results = regex.exec(location.search);
+                          return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+                            }
+                          var paramemail = getParameterByName('email');
+                         // alert(paramemail);
+
+                          var user = new Object();
+
+
+user.firstName = '';
+user.lastName = '';
+user.emailId = paramemail;
+user.pwd = '';
+user.gender = '';
+user.race = '' ;
+user.height = '';
+user.weight = '';
+user.age = '';
+user.bmi = '';
+user.eatingHabits = '';
+user.sleepingHabits = '';
+user.activityLevel = '';
+user.smokingHabits = '';
+user.drinkingHabits = '';
+user.caffeineHabits = '';
+user.bloodpressureLevel = '';
+user.cholestrolLevel = '';
+user.sugarLevel = '';
+user.haemoglobinContent = '';
+user.familyHypertension = '';
+user.familyObesity = '';
+user.familyDiabetes = '';
+user.states = '';
+
+
+//request. = userDetails;
+
+var jsonfy = $.toJSON(user);
+
+ // alert(jsonfy);
+ // var appendurl = "http://localhost:9000/mymedico/v1/user";
+ // alert(appendurl);
+
+ var posturl = "http://localhost:9000/mymedico/v1/account/user/recommendation/" + paramemail;
+var returnobj = new Object();
+ $.ajax({
+            type: "POST",
+            url: posturl,
+            contentType: "application/json;charset=utf-8",
+            dataType: "json",
+            data: jsonfy,
+            success: 
+            function(data){ ;
+               console.log(data);
+               setvalue(data);
+             //   console.log(data);
+           }
+            
+        });
+ //alert(returnobj.diabetesBand);
+
+
+
+
+                      // function getParameterByName(name) {
+                      //     name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+                      //     var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                      //     results = regex.exec(location.search);
+                      //     return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+                      //       }
+                      //     var paramemail = getParameterByName('email');
+                      //     alert(paramemail);
+
+                      //     var newurl= "editinfo.html?email="+paramemail;
+                      //      alert(newurl);
+
+                      //      window.open(newurl, "_blank", "location=yes");
+
+                        }
+
+
+
+                        window.addEventListener("load", addListeners);
+                        </script>
+                       
+
+                        <div class="row">
+   <!--      <div class="col-xs-6 ">
+            <center><button class="btn btn-xlarge btn-success"id="viewinfo" >View Profile </button></center>
+           
+        </div>
+    -->   
+      <div class="col-xs-12 ">
+            <center><button id="editinfo" class="btn btn-xlarge btn-success">View/Edit Profile</a></center></div>
+        </div> 
+        </div>
+
+                <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br><br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+
+          <br>
+
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+<br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+
+
+               
+                <div class="row" id="reco">
+                    <div class="col-md-12">
+                        <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+
+                        <center> <h2> Recommendations </h2></center>
+                      <center>  <h3> Find out how much risk you are with diabetes, Obesity and Hypertension. </h3> </center>
+                      <br>
+                    <center><button id="getreco" class="btn btn-xlarge btn-success" data-toggle="modal">Get Recommendations</a></center></div>
+
+<!-- Modal -->
+<div class="modal fade" id="recomodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="recomodal">Your Recommendations.....</h4>
+      </div>
+      <div class="modal-body">
+
+
+                                              <div>
+
+                        <p>
+                           <h2> Based on our intuitive recommendation system, here is our recommendation for you ....</h2></p>
+                        
+                        <p id="p1"></p>
+                        <p id="p2"></p>
+                        <p id="p3"></p>
+                        <p id="p4"></p>
+</div>
+
+      </div>
+     </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+                    </div>
+                </div>
+                <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+<br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+<br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+
+
+                 <div class="row" id="tools">
+                    <div class="col-md-12">
+                    <center>   <h2>Tools</h2> </center>
+                        <br>
+                        <br>
+                        <br>
+
+
+
+        <div class="col-md-6 col-md-offset-6 left-panel">
+            <div class="panel panel-default">
+                <div class="panel-heading"> <strong class=""><center>BMI Calculator</center></strong>
+
+                </div>
+                <div class="panel-body">
+
+                    <form class="form-horizontal" role="form" name = "BMI" id="bmi" onsubmit="getbmi()">
+                        <div class="form-group">
+                            <label for="weight" class="col-sm-3 control-label">Weight<sub>(weight in lbs.)</sub></label>
+                            <div class="col-sm-9">
+                                <input type="text" id="weight" placeholder="Weight" required="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="height" class="col-sm-3 control-label">Height<sub>(feet.inches)</sub></label>
+                            <div class="col-sm-9">
+                                <input type="height" id="height" placeholder="Height" required="">
+                            </div>
+                        </div>
+
+                        <div class="form-group last">
+                            <div class="col-sm-offset-3 col-sm-6">
+                                <button class="btn btn-success btn-bg" id="bmisubmit" datatoggle="modal">Calculate BMI</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+<div class="modal fade" id="bmimodal" tabindex="-1" role="dialog" aria-labelledby="bmimodal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+       <center> <h4 class="modal-title" id="bmimodal">BMI Calculator</h4> </center>
+      </div>
+      <div class="modal-body">
+
+
+                                              <div>
+
+                        <p>
+                        <center>   <h2> You BMI is</h2></center></p>
+                        
+                    <center>    <p id="bmimodalp"></p> </center>
+</div>
+
+      </div>
+     </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+
+<div class="col-lg-6 col-lg-offset-6 right-panel">
+            <div class="panel panel-default">
+                <div class="panel-heading"> <strong class=""><center>Ideal Weight Calculator</center></strong>
+
+                </div>
+                <div class="panel-body">
+                    <form class="form-horizontal" role="form" name = "idealweight" id="iwc">
+                       
+                                            <div class="form-group">
+
+                              <label for="genderradio" class="col-sm-3 control-label">Sex</label>
+                                <div class="col-sm-6">
+                                  <label class="radio-inline"><input type="radio" id = "gender" name="gender" value="male">Male</label>
+                                  <label class="radio-inline"><input type="radio"  id = "gender" name="gender" value = "female">Female</label>
+                              </div>
+                            </div>
+                          
+             
+                        <div class="form-group">
+                            <label for="height" class="col-sm-3 control-label">Height<sub>(feet.inches)</sub></label>
+                            <div class="col-sm-4">
+                                <input type="height" name = "pwd" class="form-control" id="idheight" placeholder="Height" required="">
+                            </div>
+                        </div>
+
+                        <div class="form-group last">
+                            <div class="col-sm-offset-3 col-sm-6">
+                                <button datatoggle="modal" class="btn btn-success btn-bg" id="iwsubmit">Calculate Ideal Weight</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+<div class="modal fade" id="idealmodal" tabindex="-1" role="dialog" aria-labelledby="idealmodal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+       <center> <h4 class="modal-title" id="idealmodal">Ideal weight calculator</h4> </center>
+      </div>
+      <div class="modal-body">
+
+
+                                              <div>
+
+                        <p>
+                        <center>   <h2> You Ideal Weight is</h2></center></p>
+                        
+                    <center>    <p id="idealmodalp"></p> </center>
+</div>
+
+      </div>
+     </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+
+
+                    </div>
+                </div>
+
+                 <div class="row" id="analytics">
+<script type="text/javascript">
+
+                   $(document).ready(function () {
+  $('.group').hide();
+  $('#option1').show();
+  $('#selectMe').change(function () {
+    $('.group').hide();
+    $('#'+$(this).val()).show();
+  })
+});
+                    </script>
+                    <div class="col-md-12">
+                        <Center><h2> Analytics</h2></Center>
+
+<br>
+<br>
+
+&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button class="btn btn-info btn-xlarge" data-toggle="modal" data-target="#a1">Diabetes in the US</button>
+
+<!-- Modal -->
+<div class="modal fade" id="a1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Diabetes in the US</h4>
+
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      </div>
+      <div class="modal-body">
+
+
+                        <script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 804px; height: 669px;'><noscript><a href='#'><img alt='United States Diabetics Statistics ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;My&#47;Mymedico&#47;DiabeticsStroy&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='804' height='669' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='path' value='views&#47;Mymedico&#47;DiabeticsStroy' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;My&#47;Mymedico&#47;DiabeticsStroy&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showVizHome' value='no' /><param name='showTabs' value='y' /><param name='bootstrapWhenNotified' value='true' /></object></div>
+   
+      </div>
+     </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+                        <button class="btn btn-xlarge btn-info" data-toggle="modal" data-target="#a2">Diabetes-Obesity-Hypertension in the US</button>
+
+<!-- Modal -->
+<div class="modal fade" id="a2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Diabetes-Obesity-Hypertension in the US</h4>
+      </div>
+      <div class="modal-body">
+
+
+                         <script type='text/javascript' src='http://public.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 874px; height: 969px;'><noscript><a href='#'><img alt='Dashboard 1 ' src='http:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;US&#47;USAinactivityobesityhypertensiondiabetes2&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='874' height='969' style='display:none;'><param name='host_url' value='http%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='USAinactivityobesityhypertensiondiabetes2&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='http:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;US&#47;USAinactivityobesityhypertensiondiabetes2&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showVizHome' value='no' /><param name='showTabs' value='y' /><param name='bootstrapWhenNotified' value='true' /></object></div>
+      </div>
+     </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<br>
+<br>
+<br>
+
+&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+
+<button class="btn btn-info btn-xlarge " data-toggle="modal" data-target="#a3">World Diabetes Statistics</button>
+
+<div class="modal fade" id="a3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">World Diabetes Statistics</h4>
+      </div>
+      <div class="modal-body">
+
+
+                         <script type='text/javascript' src='http://public.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 704px; height: 869px;'><noscript><a href='#'><img alt='Prevalence of Diabetes mellitus in adults (20-79 years), 2013 ' src='http:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Gl&#47;GlobalPrevalenceofDiabetes2013_0&#47;PrevalenceofDiabetesmellitusstdprev2013&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='704' height='869' style='display:none;'><param name='host_url' value='http%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='GlobalPrevalenceofDiabetes2013_0&#47;PrevalenceofDiabetesmellitusstdprev2013' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='http:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Gl&#47;GlobalPrevalenceofDiabetes2013_0&#47;PrevalenceofDiabetesmellitusstdprev2013&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showVizHome' value='no' /><param name='showTabs' value='y' /><param name='bootstrapWhenNotified' value='true' /></object></div>
+      </div>
+     </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+
+<button class="btn btn-info btn-xlarge" data-toggle="modal" data-target="#a4">US County wise Obesity analytics </button>
+
+
+<div class="modal fade" id="a4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">US County wise Obesity analytics</h4>
+      </div>
+      <div class="modal-body">
+
+
+                        <script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 804px; height: 795px;'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;co&#47;contributorstoobesityv8&#47;EatYourVegetablesV8&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='804' height='795' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='contributorstoobesityv8&#47;EatYourVegetablesV8' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;co&#47;contributorstoobesityv8&#47;EatYourVegetablesV8&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showVizHome' value='no' /><param name='showTabs' value='y' /><param name='bootstrapWhenNotified' value='true' /></object></div>
+                            </div>
+     </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<br>
+<br>
+<br>
+
+&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<button class="btn btn-info btn-xlarge" data-toggle="modal" data-target="#a5">Obesity vs. Education </button>
+
+
+<div class="modal fade" id="a5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Obesity Vs. Education</h4>
+      </div>
+      <div class="modal-body">
+
+
+                        <script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 804px; height: 795px;'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;co&#47;contributorstoobesityv8&#47;EatYourVegetablesV8&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='804' height='795' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='contributorstoobesityv8&#47;EatYourVegetablesV8' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;co&#47;contributorstoobesityv8&#47;EatYourVegetablesV8&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showVizHome' value='no' /><param name='showTabs' value='y' /><param name='bootstrapWhenNotified' value='true' /></object></div>
+                            </div>
+
+     </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+
+&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<button class="btn btn-info btn-xlarge" data-toggle="modal" data-target="#a6">Diabetes Vs. Obesity </button>
+
+
+<div class="modal fade" id="a6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Diabetes Vs. Obesity</h4>
+      </div>
+
+      <div class="modal-body">
+
+
+                        <script type='text/javascript' src='http://public.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 654px; height: 742px;'><noscript><a href='#'><img alt='Diabetes, Obesity, Poverty, and Tornados ' src='http:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;DiabetesObesityPovertyandTornados&#47;DiabetesObesityPovertyandTornados&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='654' height='742' style='display:none;'><param name='host_url' value='http%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='DiabetesObesityPovertyandTornados&#47;DiabetesObesityPovertyandTornados' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='http:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;DiabetesObesityPovertyandTornados&#47;DiabetesObesityPovertyandTornados&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showVizHome' value='no' /><param name='showTabs' value='y' /><param name='bootstrapWhenNotified' value='true' /></object></div>    </div>
+ </div>
+     </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br><br>
+&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+<button class="btn btn-info btn-xlarge" data-toggle="modal" data-target="#a7">World Obesity </button>
+
+
+<div class="modal fade" id="a7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">World Obesity</h4>
+      </div>
+
+      <div class="modal-body">
+
+
+                         <script type='text/javascript' src='http://public.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 804px; height: 669px;'><noscript><a href='#'><img alt='Obesity in the World ' src='http:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ob&#47;ObsesityintheWorldMap&#47;ObesityintheWorld&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='804' height='669' style='display:none;'><param name='host_url' value='http%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='ObsesityintheWorldMap&#47;ObesityintheWorld' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='http:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ob&#47;ObsesityintheWorldMap&#47;ObesityintheWorld&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showVizHome' value='no' /><param name='showTabs' value='y' /><param name='bootstrapWhenNotified' value='true' /></object></div>
+ </div>
+     </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+
+&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+
+
+<button class="btn btn-info btn-xlarge" data-toggle="modal" data-target="#a8">Obesity Distribution and Correlation by States </button>
+
+
+<div class="modal fade" id="a8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Obesity Distribution and Correlation by States</h4>
+      </div>
+
+      <div class="modal-body">
+
+
+                        <script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 940px; height: 769px;'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ob&#47;ObesityDistributionandCorrelation_0&#47;ObesityDistributionandCorrelationAnalysis&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='940' height='769' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='ObesityDistributionandCorrelation_0&#47;ObesityDistributionandCorrelationAnalysis' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ob&#47;ObesityDistributionandCorrelation_0&#47;ObesityDistributionandCorrelationAnalysis&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showVizHome' value='no' /><param name='showTabs' value='y' /><param name='bootstrapWhenNotified' value='true' /></object></div>
+ </div>
+     </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->  
+
+
+<br>
+<br>
+
+&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
+
+<button class="btn btn-info btn-xlarge" data-toggle="modal" data-target="#a9">Diabetes Rate Across the US </button>
+
+
+<div class="modal fade" id="a9" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Diabetes Rate Across the US</h4>
+      </div>
+
+      <div class="modal-body">
+
+
+                        <script type='text/javascript' src='http://public.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 982px; height: 742px;'><noscript><a href='#'><img alt='Diabetes Rates Across the US ' src='http:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;DiabetesRatesAcrosstheUS&#47;DiabetesRatesAcrosstheUS&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='982' height='742' style='display:none;'><param name='host_url' value='http%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='DiabetesRatesAcrosstheUS&#47;DiabetesRatesAcrosstheUS' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='http:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;DiabetesRatesAcrosstheUS&#47;DiabetesRatesAcrosstheUS&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showVizHome' value='no' /><param name='showTabs' value='y' /><param name='bootstrapWhenNotified' value='true' /></object></div>
+ </div>
+     </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->  
+
+
+&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+<button class="btn btn-info btn-xlarge" data-toggle="modal" data-target="#a10">Continuous Glucose Monitoring </button>
+
+
+<div class="modal fade" id="a10" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Continuous Glucose Monitoring</h4>
+      </div>
+
+      <div class="modal-body">
+
+
+                        <script type='text/javascript' src='http://public.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 1024px; height: 694px;'><noscript><a href='#'><img alt='Continuous Glucose Monitoring ' src='http:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;gl&#47;glucoview&#47;ContinuousGlucoseMonitoring&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='1024' height='694' style='display:none;'><param name='host_url' value='http%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='glucoview&#47;ContinuousGlucoseMonitoring' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='http:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;gl&#47;glucoview&#47;ContinuousGlucoseMonitoring&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showVizHome' value='no' /><param name='showTabs' value='y' /><param name='bootstrapWhenNotified' value='true' /></object></div>
+ </div>
+     </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->  
+
+<br>
+<br>
+
+&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
+
+<button class="btn btn-info btn-xlarge" data-toggle="modal" data-target="#a11">Hypertension Prevelance in the US </button>
+
+
+<div class="modal fade" id="a11" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Hypertension Prevelance in the US </h4>
+      </div>
+
+      <div class="modal-body">
+
+<script type='text/javascript' src='http://public.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 704px; height: 919px;'><noscript><a href='http:&#47;&#47;healthintelligence.drupalgardens.com&#47;content&#47;highest-prevalence-hypertension-located-southeastern-united-states-2001-2009'><img alt='Prevalence of Hypertension in United States, 2001-2009 ' src='http:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;US&#47;US_Hypertension_2001_2009&#47;USPrevalenceofHypertension&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='704' height='919' style='display:none;'><param name='host_url' value='http%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='US_Hypertension_2001_2009&#47;USPrevalenceofHypertension' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='http:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;US&#47;US_Hypertension_2001_2009&#47;USPrevalenceofHypertension&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showVizHome' value='no' /></object></div>
+                                </div>
+ </div>
+     </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->  
+
+
+
+
+
+
+
+
+                    
+                       
+
+
+
+<!--                         <select id="analyticsdrop">
+                            <option></option>
+                            <option value="1">Diabetes Analytics</option>
+                            <option value="2">Hypertension Analytics</option>
+                            <option value="3">Obesity Analytics</option>
+                            <option value="4">World Diabetes Analytics</option>
+                            <option value="5">County wise Obesity Analytics</option>
+                            <option value="6">Obesity vs. Education</option>
+                            <option value="7">Diabetes and Obesity</option>
+                            <option value="8">Obesity Distribution and Correlation by States</option>
+                            <option value="9">World Obesity </option>
+                            <option value="10">Diabetes Rate Across the US</option>
+                            <option value="11">Continuous Glucose Monitoring</option>
+                            <option value="12">US Prevelance of Hypertension</option>
+                            <option value="13">Lifestyle Diseases</option>
+
+                        </select>
+
+                        <div id="1" class="group">
+                            <script type='text/javascript' src='https://10ay.online.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 804px; height: 636px;'><object class='tableauViz' width='804' height='636' style='display:none;'><param name='host_url' value='https%3A%2F%2F10ay.online.tableau.com%2F' /> <param name='site_root' value='&#47;t&#47;mymedico' /><param name='name' value='Diabetics&#47;DiabeticsStroy' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='showVizHome' value='n' /></object></div>
+                        </div>
+                        <div id="2" class="group">
+                             <script type='text/javascript' src='https://10ay.online.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 1020px; height: 1000px;'><object class='tableauViz' width='1020' height='1000' style='display:none;'><param name='host_url' value='https%3A%2F%2F10ay.online.tableau.com%2F' /> <param name='site_root' value='&#47;t&#47;mymedico' /><param name='name' value='Hypertensionbook&#47;HypertensionStory' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='showVizHome' value='n' /></object></div>
+
+
+                        </div>
+                        <div id="3" class="group">
+
+                        <script type='text/javascript' src='https://10ay.online.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 1020px; height: 1000px;'><object class='tableauViz' width='1020' height='1000' style='display:none;'><param name='host_url' value='https%3A%2F%2F10ay.online.tableau.com%2F' /> <param name='site_root' value='&#47;t&#47;mymedico' /><param name='name' value='Obesity&#47;ObesityStory' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /></object></div>
+
+                            </div>
+
+                            <div id="4" class="group">
+
+                        <script type='text/javascript' src='http://public.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 704px; height: 869px;'><noscript><a href='#'><img alt='Prevalence of Diabetes mellitus in adults (20-79 years), 2013 ' src='http:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Gl&#47;GlobalPrevalenceofDiabetes2013_0&#47;PrevalenceofDiabetesmellitusstdprev2013&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='704' height='869' style='display:none;'><param name='host_url' value='http%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='GlobalPrevalenceofDiabetes2013_0&#47;PrevalenceofDiabetesmellitusstdprev2013' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='http:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Gl&#47;GlobalPrevalenceofDiabetes2013_0&#47;PrevalenceofDiabetesmellitusstdprev2013&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showVizHome' value='no' /><param name='showTabs' value='y' /><param name='bootstrapWhenNotified' value='true' /></object></div>
+                            </div>
+
+                             <div id="5" class="group">
+
+                      <script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 804px; height: 795px;'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;co&#47;contributorstoobesityv8&#47;EatYourVegetablesV8&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='804' height='795' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='contributorstoobesityv8&#47;EatYourVegetablesV8' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;co&#47;contributorstoobesityv8&#47;EatYourVegetablesV8&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showVizHome' value='no' /><param name='showTabs' value='y' /><param name='bootstrapWhenNotified' value='true' /></object></div>
+                            </div>
+
+
+                            <div id="6" class="group">
+
+                                <script type='text/javascript' src='http://public.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 604px; height: 995px;'><noscript><a href='#'><img alt=' ' src='http:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ob&#47;ObesityvsEducation_0&#47;Slopegraph&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='604' height='995' style='display:none;'><param name='host_url' value='http%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='ObesityvsEducation_0&#47;Slopegraph' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='http:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ob&#47;ObesityvsEducation_0&#47;Slopegraph&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showVizHome' value='no' /><param name='showTabs' value='y' /><param name='bootstrapWhenNotified' value='true' /></object></div>
+                            </div>
+
+                            <div id="7" class="group">
+
+                                <script type='text/javascript' src='http://public.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 654px; height: 742px;'><noscript><a href='#'><img alt='Diabetes, Obesity, Poverty, and Tornados ' src='http:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;DiabetesObesityPovertyandTornados&#47;DiabetesObesityPovertyandTornados&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='654' height='742' style='display:none;'><param name='host_url' value='http%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='DiabetesObesityPovertyandTornados&#47;DiabetesObesityPovertyandTornados' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='http:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;DiabetesObesityPovertyandTornados&#47;DiabetesObesityPovertyandTornados&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showVizHome' value='no' /><param name='showTabs' value='y' /><param name='bootstrapWhenNotified' value='true' /></object></div>
+
+                            </div>
+
+                            <div id="8" class="group">
+
+                                <script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 940px; height: 769px;'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ob&#47;ObesityDistributionandCorrelation_0&#47;ObesityDistributionandCorrelationAnalysis&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='940' height='769' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='ObesityDistributionandCorrelation_0&#47;ObesityDistributionandCorrelationAnalysis' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ob&#47;ObesityDistributionandCorrelation_0&#47;ObesityDistributionandCorrelationAnalysis&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showVizHome' value='no' /><param name='showTabs' value='y' /><param name='bootstrapWhenNotified' value='true' /></object></div>
+
+                            </div>
+
+                            <div id="9" class="group">
+
+                                    <script type='text/javascript' src='http://public.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 804px; height: 669px;'><noscript><a href='#'><img alt='Obesity in the World ' src='http:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ob&#47;ObsesityintheWorldMap&#47;ObesityintheWorld&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='804' height='669' style='display:none;'><param name='host_url' value='http%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='ObsesityintheWorldMap&#47;ObesityintheWorld' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='http:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ob&#47;ObsesityintheWorldMap&#47;ObesityintheWorld&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showVizHome' value='no' /><param name='showTabs' value='y' /><param name='bootstrapWhenNotified' value='true' /></object></div>
+                            </div>
+
+                            <div id="10" class="group">
+
+                                <script type='text/javascript' src='http://public.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 982px; height: 742px;'><noscript><a href='#'><img alt='Diabetes Rates Across the US ' src='http:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;DiabetesRatesAcrosstheUS&#47;DiabetesRatesAcrosstheUS&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='982' height='742' style='display:none;'><param name='host_url' value='http%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='DiabetesRatesAcrosstheUS&#47;DiabetesRatesAcrosstheUS' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='http:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Di&#47;DiabetesRatesAcrosstheUS&#47;DiabetesRatesAcrosstheUS&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showVizHome' value='no' /><param name='showTabs' value='y' /><param name='bootstrapWhenNotified' value='true' /></object></div>
+
+                                <div id="11" class="group">
+
+                                    <script type='text/javascript' src='http://public.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 1024px; height: 694px;'><noscript><a href='#'><img alt='Continuous Glucose Monitoring ' src='http:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;gl&#47;glucoview&#47;ContinuousGlucoseMonitoring&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='1024' height='694' style='display:none;'><param name='host_url' value='http%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='glucoview&#47;ContinuousGlucoseMonitoring' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='http:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;gl&#47;glucoview&#47;ContinuousGlucoseMonitoring&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showVizHome' value='no' /><param name='showTabs' value='y' /><param name='bootstrapWhenNotified' value='true' /></object></div>
+                                </div>
+
+                                <div id="12" class="group">
+
+                                    <script type='text/javascript' src='http://public.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 704px; height: 919px;'><noscript><a href='http:&#47;&#47;healthintelligence.drupalgardens.com&#47;content&#47;highest-prevalence-hypertension-located-southeastern-united-states-2001-2009'><img alt='Prevalence of Hypertension in United States, 2001-2009 ' src='http:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;US&#47;US_Hypertension_2001_2009&#47;USPrevalenceofHypertension&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='704' height='919' style='display:none;'><param name='host_url' value='http%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='US_Hypertension_2001_2009&#47;USPrevalenceofHypertension' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='http:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;US&#47;US_Hypertension_2001_2009&#47;USPrevalenceofHypertension&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showVizHome' value='no' /></object></div>
+                                </div>
+
+                                <div id="13" class="group">
+                                    <script type='text/javascript' src='http://public.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 874px; height: 969px;'><noscript><a href='#'><img alt='Dashboard 1 ' src='http:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;US&#47;USAinactivityobesityhypertensiondiabetes2&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='874' height='969' style='display:none;'><param name='host_url' value='http%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='USAinactivityobesityhypertensiondiabetes2&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='http:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;US&#47;USAinactivityobesityhypertensiondiabetes2&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showVizHome' value='no' /><param name='showTabs' value='y' /><param name='bootstrapWhenNotified' value='true' /></object></div>
+                                </div>
+ -->
+                            </div>
+                    </div>
+                </div>
+
+               
+            </div>
+            <!--End of inner-content-->
+
+
+
+            <br />
+            <br />
+
+        </div>
+    </div>
+
+    </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script type='text/JavaScript' src="js/jquery-1.11.1.min.js"></script>
+    <script type='text/JavaScript' src="js/bootstrap.min.js"></script>
+    <script type='text/JavaScript' src="js/common.js"></script>
+
+
+    <!-- Custom JavaScript for the Menu Toggle -->
+    <script>
+    $(document).ready(function() {
+        DocMaster.treeMenu();
+        DocMaster.sideToggle();
+        DocMaster.scrollToElement();
+    });
+    </script>
+</body>
+
+</html>

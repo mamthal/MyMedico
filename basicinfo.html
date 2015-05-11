@@ -1,0 +1,538 @@
+<!-- basic info -->
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]> <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Basic Information Form</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+<script src="jquery-1.8.3.min.js"></script>
+<script src="jquery.json-2.2.js"></script>
+<script src="GetPostAjax.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function()
+{
+$("#basicinfoform").submit(function(e){
+e.preventDefault();
+
+var firstname,lastname,email,password,gender;
+height=$("#height").val();
+//email=$("#inputEmail").val();
+weight=$("#weight").val();
+
+// race=$("race").val();
+// eatinghabits=$("eatinghabits").val();
+// sleepinghabits=$("sleepinghabits").val();
+// drinkinghabits=$("drinkinghabits").val();
+// caffeinehabits=$("caffeinehabits").val();
+// activitylevels=$("activitylevels").val();
+// smokinghabits=$("smokinghabits").val();
+// bloodpressure=$("bloodpressure").val();
+// cholestrol=$("cholestrol").val();
+// sugarlevel=$("bloodsugar").val();
+// haemoglobin=$("haemoglobin").val();
+// obesity=$("obesity").val();
+// hypertension=$("hypertension").val();
+// diabetes=$("diabetes").val();
+
+var e = document.getElementById("state");
+var state = e.options[e.selectedIndex].value;
+
+var eat = document.getElementById("eatinghabits");
+var eatinghabits = eat.options[eat.selectedIndex].value;
+
+var rac=document.getElementById("race");
+var race = rac.options[rac.selectedIndex].value;
+
+
+var sleep=document.getElementById("sleepinghabits");
+var  sleepinghabits= sleep.options[sleep.selectedIndex].value;
+
+var smoke=document.getElementById("smokinghabits");
+var smokinghabits = smoke.options[smoke.selectedIndex].value;
+
+var coffee=document.getElementById("caffeinehabits");
+var caffeinehabits = coffee.options[coffee.selectedIndex].value;
+
+var drink=document.getElementById("drinkinghabits");
+var drinkinghabits = drink.options[drink.selectedIndex].value;
+
+var activity=document.getElementById("activitylevels");
+var activitylevels = activity.options[activity.selectedIndex].value;
+
+var bp=document.getElementById("bloodpressure");
+var bloodpressure = bp.options[bp.selectedIndex].value;
+
+var chol=document.getElementById("cholestrol");
+var cholestrol = chol.options[chol.selectedIndex].value;
+
+var sugar=document.getElementById("bloodsugar");
+var bloodsugar = sugar.options[sugar.selectedIndex].value;
+
+var haemo=document.getElementById("haemoglobin");
+var haemoglobin = haemo.options[haemo.selectedIndex].value;
+
+var obes=document.getElementById("obesity");
+var obesity = obes.options[obes.selectedIndex].value;
+
+var diab=document.getElementById("diabetes");
+var diabetes = diab.options[diab.selectedIndex].value;
+
+var hyper=document.getElementById("hypertension");
+var hypertension = hyper.options[hyper.selectedIndex].value;
+
+var a=document.getElementById("age");
+var age = a.options[a.selectedIndex].value;
+
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
+var paramemail = getParameterByName('email');
+
+
+//states=$("state").text();
+
+var user = new Object();
+
+
+user.firstName = '';
+user.lastName = '';
+user.emailId = paramemail;
+user.pwd = '';
+user.gender = '';
+user.race = race ;
+user.height = height;
+user.weight = weight;
+user.age = age;
+user.bmi = '';
+user.eatingHabits = eatinghabits;
+user.sleepingHabits = sleepinghabits;
+user.activityLevel = activitylevels;
+user.smokingHabits = smokinghabits;
+user.drinkingHabits = drinkinghabits;
+user.caffeineHabits = caffeinehabits;
+user.bloodpressureLevel = bloodpressure;
+user.cholestrolLevel = cholestrol;
+user.sugarLevel = bloodsugar;
+user.haemoglobinContent = haemoglobin;
+user.familyHypertension = hypertension;
+user.familyObesity = obesity;
+user.familyDiabetes = diabetes;
+user.states = state;
+
+
+//request. = userDetails;
+
+var jsonfy = $.toJSON(user);
+
+  // alert(jsonfy);
+ // var appendurl = "http://localhost:9000/mymedico/v1/user";
+ // alert(appendurl);
+
+ var posturl = "http://localhost:9000/mymedico/v1/account/user/" + paramemail;
+
+ var newurl = "dashboard.html?email=" + paramemail;
+// alert(posturl);
+$.ajax({
+            type: "POST",
+            url: posturl,
+            contentType: "application/json;charset=utf-8",
+            dataType: "json",
+            data: jsonfy,
+            success: 
+            function(){  //alert("hereiam");
+                window.location.href = newurl;}
+            
+        });
+});
+});
+
+</script>
+<style>
+
+/* CSS used here will be applied after bootstrap.css */
+
+body { 
+
+
+ background: url('img/eco/bk-eco-ga.jpg') no-repeat center center fixed; 
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+}
+
+.panel-default {
+ opacity: 0.9;
+ margin-top:160px;
+}
+.form-group.last {
+ margin-bottom:0px;
+}
+
+</style>
+<body>
+                         <center>    <img src="http://i57.tinypic.com/ipxwl2.jpg" > </center>
+
+    <div class="container">
+        <div class = "row">
+            <div class="col-md-5 col-md-offset-3">
+                <div class="panel panel-default">
+                 <div class="panel-heading"> <strong class=""><center>Profile</center></strong>
+                </div>
+                              <center>  <h3> Basic Information </h3> </center>
+                                <form class="form-horizontal" role="form" name = "basicinfoform" id = "basicinfoform" >
+                                  <div class="form-group">
+                                        <label for="height" class="col-sm-3 control-label"> Height <sub>(e.g, 5.11)</sub> </label>
+                                            <div class="col-sm-9">
+                                                <input type="text" style="width: 100px;" class="form-control" id="height" name= "height" placeholder="Height" required="">
+                                            </div>
+                                      </div>
+                                    
+                                   <div class="form-group">
+                                        <label for="weight" class="col-sm-3 control-label"> Weight <sub> (in lbs) </sub> </label>
+                                            <div class="col-sm-9">
+                                                <input type="text" style="width: 100px;" class="form-control" id="weight" name= "weight" placeholder="Weight" required="">
+                                            </div>
+                                      </div>
+                                    
+        
+                                            <div class="form-group">
+                                      
+                                      <label for="age" class="col-sm-3 control-label"> Age </label>
+                                            <div class="col-sm-6">
+                                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        
+                            <select name="age" id="age" class="form-control" style="width:150px;">
+                            <option value="1">0-2</option>
+                            <option value="2">2-12</option>
+                            <option value="3">12-19</option>
+                            <option value="4">20-50</option>
+                            <option value="5">50-75</option>
+                            <option value="6">75 and above</option>
+                            </select>
+<!-- </div>
+ -->                                            <!-- </div> -->
+                                      </div>
+                                  </div>
+                                      </div>
+                                      <div class="form-group">
+                                      
+                                      <label for="race" class="col-sm-3 control-label"> Race </label>
+                                            <div class="col-sm-6">
+                                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        
+                            <select name="race" id="race" class="form-control" style="width:150px;">
+                            <option value="1">African American</option>
+                            <option value="2">Hispanic</option>
+                            <option value="3">Asian</option>
+                            <option value="4">Caucasian</option>
+                            <option value="5">Latin American</option>
+                            <option value="4">Native American</option>
+                            <option value="4">Other</option>
+                            </select>
+</div>
+                                            <!-- </div> -->
+                                      </div>
+                                  </div>
+                                        <div class="form-group">
+                                        <label for="state" class="col-sm-3 control-label"> State </label>
+                                            <div class="col-sm-6">
+                                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        
+                                              <select name="state" id="state" class="form-control" style="width:75px;">
+                                                            <option value="AL">AL</option>
+                                                               <option value="AK">AK</option>
+                                                                <option value="AZ">AZ</option>
+            <option value="AR">AR</option>
+            <option value="CA">CA</option>
+            <option value="CO">CO</option>
+            <option value="CT">CT</option>
+            <option value="DE">DE</option>
+            <option value="DC">DC</option>
+            <option value="FL">FL</option>
+            <option value="GA">GA</option>
+            <option value="HI">HI</option>
+            <option value="ID">ID</option>
+            <option value="IL">IL</option>
+            <option value="IN">IN</option>
+            <option value="IA">IA</option>
+            <option value="KS">KS</option>
+            <option value="KY">KY</option>
+            <option value="LA">LA</option>
+            <option value="ME">ME</option>
+            <option value="MD">MD</option>
+            <option value="MA">MA</option>
+            <option value="MI">MI</option>
+            <option value="MN">MN</option>
+            <option value="MS">MS</option>
+            <option value="MO">MO</option>
+            <option value="MT">MT</option>
+            <option value="NE">NE</option>
+            <option value="NV">NV</option>
+            <option value="NH">NH</option>
+            <option value="NJ">NJ</option>
+            <option value="NM">NM</option>
+            <option value="NY">NY</option>
+            <option value="NC">NC</option>
+            <option value="ND">ND</option>
+            <option value="OH">OH</option>
+            <option value="OK">OK</option>
+            <option value="OR">OR</option>
+            <option value="PA">PA</option>
+            <option value="RI">RI</option>
+            <option value="SC">SC</option>
+            <option value="SD">SD</option>
+            <option value="TN">TN</option>
+            <option value="TX">TX</option>
+            <option value="UT">UT</option>
+            <option value="VT">VT</option>
+            <option value="VA">VA</option>
+            <option value="WA">WA</option>
+            <option value="WV">WV</option>
+            <option value="WI">WI</option>
+            <option value="WY">WY</option>
+        </select>
+        </div>
+                                            </div>
+                                      </div>
+
+
+                                      <hr>
+
+                                      <center><h3> Lifestyle </h3></center>
+                                                          <div class="form-group">
+
+                                        <label for="eatinghabits" class="col-sm-3 control-label">  Eating Habits </label>
+                                         <div class="col-sm-6">
+                                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        
+                            <select name="eatinghabits" id="eatinghabits" class="form-control" style="width:282px;">
+                            <option value="1">High Fruits/Vegetables : Low Junk Food</option>
+                            <option value="2">High Fruits/Vegetables : Medium Junk Food</option>
+                            <option value="3">Medium Fruits/Vegetables : Medium Junk Food</option>
+                            <option value="4">Medium Fruits/Vegetables : High Junk Food</option>
+                            <option value="5">Low Fruits/Vegetables : High Junk Food</option>
+                            </select>
+                        </div>
+                    </div></div>
+
+                    <div class="form-group">
+
+                                        <label for="sleepinghabits" class="col-sm-3 control-label"> Sleeping Habits </label>
+                                            <div class="col-sm-6">
+                                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        
+                            <select name="sleepinghabits" id="sleepinghabits" class="form-control" style="width:150px;">
+                            <option value="1">Less than 7 hours</option>
+                            <option value="2">More than 7 hours</option>
+                            </select>
+                        </div>
+                                    </div>
+                                </div>
+
+
+                    <div class="form-group">
+
+                                        <label for="smokinghabits" class="col-sm-3 control-label"> Smoking Habits </label>
+                                            <div class="col-sm-6">
+                                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        
+                            <select name="smokinghabits" id="smokinghabits" class="form-control" style="width:150px;">
+                            <option value="1">No Smoking</option>
+                            <option value="2">Light</option>
+                            <option value="3">Moderate</option>
+                            <option value="4">High</option>
+                            </select>
+                                    </div>
+                                    </div>
+                                </div>
+
+                    <div class="form-group">
+
+                                        <label for="drinkinghabits" class="col-sm-3 control-label"> Drinking Habits </label>
+                                            <div class="col-sm-6">
+                                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        
+                            <select name="drinkinghabits" id="drinkinghabits" class="form-control" style="width:150px;">
+                            <option value="1">None</option>
+                            <option value="2">Light</option>
+                            <option value="3">Moderate</option>
+                            <option value="4">High</option>
+                            </select>
+                                    </div>
+                                    </div>
+                                </div>
+
+                      <div class="form-group">
+
+                                        <label for="caffeinehabits" class="col-sm-3 control-label"> Caffeine Habits </label>
+                                            <div class="col-sm-6">
+                                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        
+                            <select name="caffeinehabits" id="caffeinehabits" class="form-control" style="width:150px;">
+                            <option value="1">None</option>
+                            <option value="2">Light</option>
+                            <option value="3">Moderate</option>
+                            <option value="4">High</option>
+                            </select>
+                                    </div>
+                                    </div>
+                                </div>
+
+                      <div class="form-group">
+
+                                        <label for="activities" class="col-sm-3 control-label"> Activity Levels </label>
+                                            <div class="col-sm-6">
+                                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        
+                            <select name="drinkinghabits" id="activitylevels" class="form-control" style="width:150px;">
+                            <option value="1">Light/Sedentary</option>
+                            <option value="2">Moderate</option>
+                            <option value="3">High</option>
+                            </select>
+                                    </div>
+                                    </div>
+                                </div>
+
+                    <hr>
+
+                     <center><h3>Health Numbers </h3> </center>
+
+                      <div class="form-group">
+
+                                        <label for="bloodpressure" class="col-sm-3 control-label"> Blood Pressure Levels </label>
+                                            <div class="col-sm-6">
+                                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        
+                            <select name="bloodpressure" id="bloodpressure" class="form-control" style="width:290px;">
+                            <option value="1">less than 120,Systolic and less than 80,Diastolic</option>
+                            <option value="2">120-139,Systolic and 80-89,Diastolic</option>
+                            <option value="3">140-159,Systolic and 90-99,Diastolic </option>
+                            <option value="4">160 or higher,Systolic and 100 or higher,Diastolic</option>
+                              <option value="4">Greater than 180,Systolic and Greater than 110,Diastolic</option>
+                            </select>
+                                    </div>
+                                    </div>
+                                </div>
+
+
+                         <div class="form-group">
+
+                                        <label for="bloodsugar" class="col-sm-3 control-label"> Blood Sugar Levels </label>
+                                            <div class="col-sm-6">
+                                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        
+                            <select name="bloodsugar" id="bloodsugar" class="form-control" style="width:290px;">
+                            <option value="1">70-100(Fasting) and Less than 140(Post Prandial)</option>
+                            <option value="2">101-126(Fasting) and 140-200(Post Prandial)</option>
+                            <option value="3">More than 126(Fasting) and More than 200(Post Prandial) </option>
+                            </select>
+                                    </div>
+                                    </div>
+                                </div>
+
+                             <div class="form-group">
+
+                                        <label for="cholestrol" class="col-sm-3 control-label"> Cholestrol Levels </label>
+                                            <div class="col-sm-6">
+                                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        
+                            <select name="cholestrol" id="cholestrol" class="form-control" style="width:190px;">
+                            <option value="1">Less than 200mg/dL</option>
+                            <option value="2">200-239mg/dL</option>
+                            <option value="3">240mg/dL and over </option>
+                            </select>
+                                    </div>
+                                    </div>
+                                </div>
+
+                             <div class="form-group">
+
+                                        <label for="haemoglobin" class="col-sm-3 control-label"> Haemoglobin Content </label>
+                                            <div class="col-sm-6">
+                                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        
+                            <select name="haemoglobin" id="haemoglobin" class="form-control" style="width:150px;">
+                            <option value="1">Less that 13.5</option>
+                            <option value="2">13.5-17.5</option>
+                            <option value="3">More than 17.5</option>
+                            </select>
+                                    </div>
+                                    </div>
+                                </div>
+
+
+                                    <hr>
+
+                     <center><h3> Family History </h3> </center>
+
+
+                             <div class="form-group">
+
+                                        <label for="diabetes" class="col-sm-3 control-label"> Diabetes </label>
+                                            <div class="col-sm-6">
+                                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        
+                            <select name="diabetes" id="diabetes" class="form-control" style="width:150px;">
+                            <option value="0">None</option>
+                            <option value="1">Yes</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+                                                     <div class="form-group">
+
+                         <label for="Obesity" class="col-sm-3 control-label"> Obesity </label>
+                                            <div class="col-sm-6">
+                                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        
+                            <select name="obesity" id="obesity" class="form-control" style="width:150px;">
+                            <option value="0">None</option>
+                            <option value="2">Yes</option>
+                        </select>
+                    </div>
+                    </div>
+                    </div>
+                                                                         <div class="form-group">
+
+                        <label for="hypertension" class="col-sm-3 control-label"> Hypertension </label>
+                                            <div class="col-sm-6">
+                                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        
+                            <select name="hypertension" id="hypertension" class="form-control" style="width:150px;">
+                            <option value="0">None</option>
+                            <option value="3">Yes</option>
+                        </select>
+
+                                    </div>
+                                    </div>
+                                </div>
+
+                    <div class="form-group">
+                            <div class="col-sm-offset-3 col-sm-6">
+                                <center><button type="submit" class="btn btn-success btn-md" id="submit">Save</button></center>
+                               
+                            </div>
+                        </div>
+
+                        </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
